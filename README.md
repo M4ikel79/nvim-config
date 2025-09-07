@@ -1,12 +1,12 @@
 # Neovim Configuration
 
-A customized Neovim setup with Lua-based configuration, featuring modern plugins and development tools.
+A customized Neovim setup based on NvChad, featuring modern plugins and development tools.
 
 ## Quick Start
 
 ```bash
 # Clone to your nvim configuration directory
-git clone <repository-url> ~/.config/nvim
+git clone https://github.com/M4ikel79/nvim-config.git ~/.config/nvim
 
 # Start Neovim (plugins will auto-install)
 nvim
@@ -31,6 +31,7 @@ nvim
 ### UI & Themes
 - **Dracula Pro**: Dark theme variant
 - **Monokai Pro**: High-contrast theme
+- **Transparent mode** Transparent background
 - **Smooth Scrolling**: Neoscroll for fluid navigation
 - **Trouble Integration**: Centralized diagnostics viewer
 
@@ -88,6 +89,7 @@ This configuration uses lazy.nvim for plugin management. Plugins are organized b
 
 Key mappings are defined in `lua/mappings.lua`. The leader key is set to space by default. Common patterns:
 
+- `<leader>fk` - Key mappings
 - `<leader>f` - File operations
 - `<leader>g` - Git operations
 - `<leader>t` - Terminal operations
@@ -99,7 +101,7 @@ The configuration is modular and easy to extend:
 
 1. **Add new plugins**: Add plugin specs to `lua/plugins/`
 2. **Customize options**: Modify `lua/options.lua`
-3. **Change themes**: Edit `lua/themes/` files
+3. **Add themes**: Add or Remove `lua/themes/` files
 4. **Add mappings**: Update `lua/mappings.lua`
 
 ## Performance
