@@ -7,9 +7,9 @@ local augroup = vim.api.nvim_create_augroup
 autocmd("BufReadPost", {
   group = augroup("RestoreCursor", { clear = true }),
   callback = function()
-    local line = vim.fn.line("'\"")
-    if line > 1 and line <= vim.fn.line("$") and vim.bo.filetype ~= "commit" then
-      vim.cmd('normal! g`"')
+    local line = vim.fn.line "'\""
+    if line > 1 and line <= vim.fn.line "$" and vim.bo.filetype ~= "commit" then
+      vim.cmd 'normal! g`"'
     end
   end,
 })
@@ -18,7 +18,7 @@ autocmd("BufReadPost", {
 autocmd("TextYankPost", {
   group = augroup("HighlightYank", { clear = true }),
   callback = function()
-    vim.highlight.on_yank({ timeout = 200 })
+    vim.highlight.on_yank { timeout = 200 }
   end,
 })
 
@@ -26,12 +26,23 @@ autocmd("TextYankPost", {
 autocmd("BufWritePre", {
   group = augroup("CleanupOnSave", { clear = true }),
   callback = function()
-    local cursor_pos = vim.fn.getpos(".")
+    local cursor_pos = vim.fn.getpos "."
 
     -- Remove trailing whitespace
-    vim.cmd([[%s/\s\+$//e]])
+    vim.cmd [[%s/\s\+$//e]]
 
     -- Restore cursor position
     vim.fn.setpos(".", cursor_pos)
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "nu",
+  callback = function()
+    vim.lsp.start {
+      name = "nushell",
+      cmd = { "nu", "--lsp" },
+      root_dir = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1]),
+    }
   end,
 })

@@ -1,7 +1,7 @@
 local options = {
 
   base46 = {
-    theme = "dracula-pro", -- default theme
+    theme = "tokyodark", -- default theme
     hl_add = {},
     hl_override = {
       Comment = { italic = true },
@@ -11,8 +11,8 @@ local options = {
     },
     integrations = {},
     changed_themes = {},
-    transparency = true,
-    theme_toggle = { "dracula-pro", "one_light" },
+    transparency = false,
+    theme_toggle = { "tokyodark", "one_light" },
   },
 
   ui = {
