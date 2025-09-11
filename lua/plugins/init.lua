@@ -60,7 +60,7 @@ return {
       -- require("mini.bufremove").setup()      -- buffer removal commands
       -- require("mini.bracketed").setup()      -- bracketed text objects navigation
       -- require("mini.clue").setup()           -- keybinding hints
-      -- require("mini.comment").setup()        -- comment/uncomment lines
+      require("mini.comment").setup() -- comment/uncomment lines
       -- require("mini.files").setup()          -- lightweight file explorer
       -- require("mini.jump").setup()           -- navigation helper
       require("mini.move").setup() -- move lines/blocks
@@ -92,6 +92,7 @@ return {
         stages = "fade_in_slide_out",
         timeout = 5000,
         background_colour = "#1e222a",
+        -- background_colour = "#17643e"
         minimum_width = 30,
         icons = {
           error = "",

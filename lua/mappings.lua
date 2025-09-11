@@ -462,3 +462,7 @@ map("n", "<leader>ts", "<cmd>TyprStats<cr>", { desc = "Typr Stats" })
 
 -- Cheatsheet
 map("n", "<leader>ch", "<cmd>NvCheatsheet<cr>", { desc = "Mapping cheatsheet" })
+
+-- Minty
+-- map("n", "C-", "<cmd>Huefy<cr>", { desc = "Huefy" })
+-- map("n", "<leader>ch", "<cmd>NvCheatsheet<cr>", { desc = "" })

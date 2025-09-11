@@ -1,7 +1,7 @@
 local options = {
 
   base46 = {
-    theme = "tokyodark", -- default theme
+    theme = "kanagawa", -- default theme
     hl_add = {},
     hl_override = {
       Comment = { italic = true },
@@ -12,7 +12,7 @@ local options = {
     integrations = {},
     changed_themes = {},
     transparency = false,
-    theme_toggle = { "tokyodark", "one_light" },
+    theme_toggle = { "kanagawa", "one_light" },
   },
 
   ui = {
