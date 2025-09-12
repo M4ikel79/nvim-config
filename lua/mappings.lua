@@ -64,7 +64,10 @@ map("x", "p", [["_dP]], { desc = "Paste without yanking" })
 map("v", "<C-a>", "ggVG", { desc = "Select all" })
 
 -- Copy entire file
-map("v", "<C-c>", "<cmd>%y+<CR>", { desc = "Copy whole file" })
+map("v", "<leader>cy", "<cmd>+y<CR>", { desc = "Copy entire files" })
+
+-- Copy selection
+map("v", "<C-c>", "<cmd>+y<CR>", { desc = "Copy Selection" })
 
 -- Better search centering
 map("n", "n", "nzzzv", { desc = "Next Search Result" })
@@ -197,7 +200,6 @@ map("n", "<leader>fT", "<cmd>Telescope builtin<cr>", { desc = "Telescope" })
 -- FIXED: Changed <C-n> to <C-e> to avoid vim-visual-multi conflict
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Explorer NvimTree (Root Dir)" })
 map("n", "<leader>E", "<cmd>NvimTreeFocus<cr>", { desc = "Explorer NvimTree (cwd)" })
-map("n", "<C-e>", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle nvim-tree" })
 
 -- ================================
 -- TERMINAL

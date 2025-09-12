@@ -1,6 +1,13 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "emmet-ls", "html-lsp", "css-lsp", "black", "eslint-lsp", "eslint_d" }
+local servers = {
+  "emmet-ls",
+  "html-lsp",
+  "css-lsp",
+  "black",
+  "eslint-lsp",
+  "eslint_d",
+}
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers

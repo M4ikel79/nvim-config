@@ -92,6 +92,7 @@ return {
         stages = "fade_in_slide_out",
         timeout = 5000,
         background_colour = "#1e222a",
+        -- background_colour = "rgb(0, 0, 0)",
         -- background_colour = "#17643e"
         minimum_width = 30,
         icons = {

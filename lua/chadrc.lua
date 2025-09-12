@@ -1,7 +1,7 @@
 local options = {
 
   base46 = {
-    theme = "kanagawa", -- default theme
+    theme = "tokyodark", -- default theme
     hl_add = {},
     hl_override = {
       Comment = { italic = true },
@@ -12,7 +12,7 @@ local options = {
     integrations = {},
     changed_themes = {},
     transparency = false,
-    theme_toggle = { "kanagawa", "one_light" },
+    theme_toggle = { "tokyodark", "one_light" },
   },
 
   ui = {
@@ -119,7 +119,13 @@ local options = {
     enabled = true,
     mode = "virtual", -- fg, bg, virtual
     virt_text = "󱓻 ",
-    highlight = { hex = true, lspvars = true },
+    highlight = {
+      hex = true,
+      rgb = true, -- enable rgb()/rgba()
+      hsl = true, -- enable hsl()/hsla()
+      names = true, -- enable named colors like 'red'
+      lspvars = true,
+    },
   },
 }
 

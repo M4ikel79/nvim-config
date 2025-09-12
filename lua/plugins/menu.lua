@@ -11,14 +11,14 @@ return {
       desc = "Open Context Menu",
     },
     {
-      "<leader>cm",
+      "<leader>dm",
       function()
         require("menu").open "coding"
       end,
       desc = "Development Menu",
     },
     {
-      "<leader>fm",
+      "<leader>mm",
       function()
         require("menu").open "files"
       end,

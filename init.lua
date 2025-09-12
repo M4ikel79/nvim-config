@@ -32,7 +32,7 @@ dofile(vim.g.base46_cache .. "statusline")
 require "options"
 require "utils.code_folds"
 require "autocmds"
-
+require "menu"
 vim.schedule(function()
   require "mappings"
 end)
